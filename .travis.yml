@@ -1,0 +1,24 @@
+language: node_js
+node_js:
+  - "14"
+  - "16"
+  - "18"
+
+# Cache node_modules for faster builds
+cache:
+  directories:
+    - "node_modules"
+
+# Install dependencies
+install:
+  - npm install
+
+# Run tests
+script:
+  - npm test
+
+# Specify the branch to build
+branches:
+  only:
+    - main
+    - master
